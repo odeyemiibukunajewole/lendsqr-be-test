@@ -8,8 +8,8 @@ module.exports = {
     database: process.env.DB_DATABASE,
     host: process.env.DB_HOST,
     dialect: "mysql2",
-    migrationsPath: path.join(__dirname, "./migrations"),
-    seedersPath: path.join(__dirname, "./seeders"),
+    migrationsPath: path.join(__dirname, "../migrations"),
+    seedersPath: path.join(__dirname, "../seeders"),
     tableName: "knex_migrations",
   },
   production: {
@@ -18,8 +18,8 @@ module.exports = {
     database: process.env.DB_DATABASE_PROD,
     host: process.env.DB_HOST_PROD,
     dialect: "mysql2",
-    migrationsPath: path.join(__dirname, "./migrations"),
-    seedersPath: path.join(__dirname, "./seeders"),
+    migrationsPath: path.join(__dirname, "../migrations"),
+    seedersPath: path.join(__dirname, "../seeders"),
     tableName: "knex_migrations",
   },
 };

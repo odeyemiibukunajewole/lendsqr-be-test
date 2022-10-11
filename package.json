@@ -4,7 +4,13 @@
   "description": "A mobile lending app that requires wallet functionality",
   "main": "index",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && NODE_ENV=production knex migrate:latest && NODE_ENV=production npm run migrate-seed && NODE_ENV=production node ./dist/index.js",
+    "dev": "knex migrate:latest",
+    "build": "babel src -d dist",
+    "migrate": "knex migrate:latest",
+    "migrate-seed-dev": "knex seed:run",
+    "migrate-seed": "NODE_ENV=production && knex seed:run"
   },
   "repository": {
     "type": "git",
